@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - Thy Mirror</title>
+    <link rel="stylesheet" href="signin.css">
+    
+</head>
+<body>
+    <div class="auth-container">
+        <h2>Sign In</h2>
+        <input type="text" id="signin-username" placeholder="Username">
+        <input type="password" id="signin-password" placeholder="Password">
+        <button onclick="signIn()">Sign In</button>
+        <div class="switch">
+            <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+        </div>
+    </div>
+
+    <script>
+        async function signIn() {
+            const username = document.getElementById('signin-username').value;
+            const password = document.getElementById('signin-password').value;
+
+            const response = await fetch('/signin', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ username, password })
+            });
+
+            if (response.ok) {
+                alert('Sign in successful!');
+                // Redirect to another page or handle the signed-in state
+            } else {
+                const errorText = await response.text();
+                alert(errorText);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Thy Mirror</title>
+    <link rel="stylesheet" href="signup.css">
+   
+</head>
+<body>
+    <div class="auth-container">
+        <h2>Sign Up</h2>
+        <input type="text" id="signup-username" placeholder="Username">
+        <input type="password" id="signup-password" placeholder="Password">
+        <button onclick="signUp()">Sign Up</button>
+        <div class="switch">
+            <p>Already have an account? <a href="signin.html">Sign In</a></p>
+        </div>
+    </div>
+
+    <script>
+        async function signUp() {
+            const username = document.getElementById('signup-username').value;
+            const password = document.getElementById('signup-password').value;
+
+            const response = await fetch('/signup', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ username, password })
+            });
+
+            if (response.ok) {
+                alert('Sign up successful!');
+                // Redirect to sign-in page
+                window.location.href = 'signin.html';
+            } else {
+                const errorText = await response.text();
+                alert(errorText);
+            }
+        }
+    </script>
+</body>
+</html>

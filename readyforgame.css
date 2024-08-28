@@ -1,0 +1,205 @@
+/* General Styles */
+body {
+  background-image: url(R.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh; /* Use viewport height for better responsiveness */
+  z-index: 0;
+  margin: 0; /* Remove default body margin */
+  padding: 0;
+  box-sizing: border-box; /* Ensure consistent box model */
+
+}
+
+
+.mirror {
+  color: rgba(206, 48, 48, 0.842);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 40px;
+  position: center;
+  top: 10px; /* Adjust positioning for better responsiveness */
+  right: 10%; /* Use percentage for responsiveness */
+}
+
+.line {
+  border-radius: 10px;
+  height: 23px;
+  width: 100%; /* Full width on smaller screens */
+  max-width: 300px; /* Maximum width on larger screens */
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  opacity: 0.8;
+  position: absolute;
+  top: 10px; /* Adjust positioning for better responsiveness */
+  left: 56%; /* Use percentage for responsiveness */
+ 
+}
+
+.about-thy {
+  color: rgb(146, 79, 79);
+  font-weight: bolder;
+  margin-top: 140px;
+  font-size: 30px;
+}
+
+.about {
+  color: rgb(80, 79, 79);
+  font-size: 23px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+span {
+  color: rgba(165, 42, 42, 0.637);
+}
+
+
+a {
+  display: inline-block;
+  width: 100%; /* Full width on smaller screens */
+  max-width: 200px; /* Maximum width on larger screens */
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.527);
+  text-decoration: none;
+  color: rgb(146, 79, 79);
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 5px; /* Slightly increased border radius */
+  text-align: center;
+  line-height: 50px; /* Center text vertically */
+  box-sizing: border-box;
+}
+
+
+
+    /* Style the sidebar */
+    .sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+   }
+
+  
+
+  /* Style links inside the sidebar */
+  .sidebar a {
+      padding: 10px 20px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #a71414;
+      display: block;
+      transition: 0.3s;
+  }
+
+  /* On mouse-over */
+  .sidebar a:hover {
+      color: #f1f1f1;
+  }
+
+  /* Button to open the sidebar */
+  .openbtn {
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    position: fixed;
+    top: 15px;
+    left: 10px;
+    z-index: 2;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .openbtn:hover {
+   background-color: rgba(24, 23, 23, 0.637);
+        
+   }
+
+ 
+
+
+    
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .mirror {
+    font-size: 24px; /* Smaller font size for mobile */
+    top: 5px; /* Adjust positioning */
+    right: 5%; /* Use percentage for responsiveness */
+  }
+
+  .about-thy {
+    font-size: 24px; /* Smaller font size for mobile */
+    margin-top: 80px; /* Adjust margin for better spacing */
+  }
+
+  .about {
+    font-size: 18px; /* Smaller font size for mobile */
+  }
+
+  a {
+    font-size: 24px; /* Smaller font size for mobile */
+    height: 40px; /* Adjust height */
+    line-height: 40px; /* Center text vertically */
+  }
+
+  .logo {
+    top: 5px; /* Adjust positioning */
+    right: 5%; /* Use percentage for responsiveness */
+    
+  }
+}
+
+@media (max-width: 480px) {
+  .mirror {
+    font-size: 18px; 
+  }
+
+  .about-thy {
+    font-size: 20px; 
+    margin-top: 60px; 
+  }
+
+  .about {
+    font-size: 16px; 
+  }
+
+  a {
+    font-size: 20px; 
+    height: 35px; 
+    line-height: 35px; 
+  }
+}
+
+
+
+@supports (-webkit-touch-callout: none) { 
+  a {
+    font-size: 26px; 
+  }
+}
+
+@supports (-ms-ime-align: auto) { /* Edge/IE specific styles */
+  .logo {
+    right: 50%; /* Adjust positioning as percentage calculations may differ */
+  }
+
+  a {
+    height: auto; /* Ensure links are properly sized */
+    line-height: normal; /* Prevent text from being cut off */
+    padding: 10px 0; /* Add padding for better spacing */
+  }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Thy Mirror</title>
+    <link rel="shortcut icon" type="x-icon" href="GameLogo.jpg" />
+</head>
+<body>
+    <div class="sidebar" id="mySidebar">
+        <button class="baritem" onclick="toggleSidebar()"></button>
+        <a href="developers.html" class="Developers">Developers</a>
+        <a href="#" class="Feedback">Feedback</a>
+        <a href="https://www.mediafire.com/folder/fo50ektnatnjo/ThyMirror1.0" class="Download">Download</a>
+    </div>
+
+    <div class="auth-buttons">
+        <button class="sign-in" onclick="window.location.href = 'signin.html';">Sign In</button>
+        <button class="sign-up" onclick="window.location.href = 'signup.html';">Sign Up</button>
+    </div>
+
+    <div class="toggle" style="margin-right:200px">
+        <button class="openbtn" onclick="toggleSidebar()">&#9776; Sidebar</button>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById("mySidebar");
+            if (sidebar.style.width === "200px") {
+                sidebar.style.width = "0";
+            } else {
+                sidebar.style.width = "200px";
+            }
+        }
+
+        function downloadNow() {
+            window.location.href = 'https://www.mediafire.com/folder/fo50ektnatnjo/ThyMirror1.0';
+        }
+    </script>
+
+    <div class="content">
+        <center>
+            <div class="logo-box"><h1 class="mirror">· Thy Mirror ·</h1></div>
+            <p class="about-thy">Game Description</p>
+            <img src="4LuqoV-removebg-preview-removebg-preview.png" alt="" class="line">
+            <p class="about"><span>Thy Mirror</span> is a spine-chilling horror survival game<br> where you find yourself trapped in a haunted house with mysterious entities lurking in the shadows.<br> Explore, solve puzzles, and uncover the dark secrets hidden within.<br><span>Download now</span> and experience this terrific story</p>
+            <button class="download-now" onclick="downloadNow()">Download Now</button>
+        </center>
+        <img src="GameLogo-removebg-preview.png" alt="logo for gaming" class="logo">
+    </div>
+</body>
+</html>

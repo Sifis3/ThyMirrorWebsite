@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="readyforgame.css">
+    <title>Thy Mirror</title>
+    <link rel="shortcut icon" type="x-icon" href="GameLogo.jpg" />
+    <script src="js/game.js"></script>
+</head>
+<body>
+
+<!-- Page Content -->
+
+
+ <body>
+
+
+<div class="sidebar" id="mySidebar">
+    <button  class="baritem " onclick="toggleSidebar()"></button>
+    <a href="developers.html" class="Developers">Developers</a>
+    <a href="#" class="Feedback">Feedback</a>
+    <a href="#" class="Download">Download</a>
+</div>
+
+
+<div class="toggle" style="margin-right:200px">
+    <button  class="openbtn" onclick="toggleSidebar()">&#9776; Sidebar</button>
+    
+</div>
+
+<script>
+    function toggleSidebar() {
+        var sidebar = document.getElementById("mySidebar");
+        if (sidebar.style.width === "200px") {
+            sidebar.style.width = "0";
+        } else {
+            sidebar.style.width = "200px";
+        }
+    }
+
+
+   
+    function toggleInfo() {
+        var info = document.getElementById("info");
+        if (info.style.display === "none") {
+            info.style.display = "block";
+        } else {
+            info.style.display = "none";
+
+        }
+    }
+</script>
+
+
+<div class="content">
+    <center>
+        <div class="logo-box"><h1 class="mirror"> · Thy Mirror ·  </h1></div>
+        <p class="about-thy">Game Description</p>
+        <img src="4LuqoV-removebg-preview-removebg-preview.png" alt="" class="line">
+        <p class="about"><span>Thy Mirror</span> is a spine-chilling horror survival game<br> where you find yourself trapped in a haunted house with mysterious entities lurking in the shadows.<br> Explore, solve puzzles, and uncover the dark secrets hidden within.</p>
+    </center>
+    <img src="GameLogo-removebg-preview.png" alt="logo for gaming" class="logo">
+</div>
+
+
+</body>
+</html>
+

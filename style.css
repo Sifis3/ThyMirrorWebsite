@@ -1,0 +1,234 @@
+/* General Styles */
+body {
+  background-image: url(R.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh; /* Use viewport height for better responsiveness */
+  z-index: 0;
+  margin: 0; /* Remove default body margin */
+  padding: 0;
+  box-sizing: border-box; /* Ensure consistent box model */
+  display: flex;       
+  align-items: center; /* Center the content vertically */
+  flex-direction: column; /* Arrange items in a column */
+}
+
+.game-container {
+  width: 960px;
+  height: 600px;
+  border: 2px solid #000;
+  position: relative;
+}
+
+.mirror {
+  color: rgba(206, 48, 48, 0.842);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 40px;
+  position: center;
+  top: 10px; /* Adjust positioning for better responsiveness */
+  right: 10%; /* Use percentage for responsiveness */
+}
+
+.line {
+  border-radius: 10px;
+  height: 23px;
+  width: 100%; /* Full width on smaller screens */
+  max-width: 300px; /* Maximum width on larger screens */
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  opacity: 0.8;
+  position: fixed; /* Use fixed instead of absolute */
+  top: 10px; /* Adjust positioning for better responsiveness */
+  left: calc(50% + 150px); /* Move 20 pixels to the right of the center */
+}
+
+.about-thy {
+  color: rgb(146, 79, 79);
+  font-weight: bolder;
+  margin-top: 140px;
+  font-size: 30px;
+}
+
+.about {
+  color: rgb(80, 79, 79);
+  font-size: 23px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+span {
+  color: rgba(165, 42, 42, 0.637);
+}
+
+a {
+  display: inline-block;
+  width: 100%; /* Full width on smaller screens */
+  max-width: 200px; /* Maximum width on larger screens */
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.527);
+  text-decoration: none;
+  color: rgb(146, 79, 79);
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 5px; /* Slightly increased border radius */
+  text-align: center;
+  line-height: 50px; /* Center text vertically */
+  box-sizing: border-box;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #a71414;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.openbtn {
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  position: fixed;
+  top: 15px;
+  left: 10px;
+  z-index: 2;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.openbtn:hover {
+  background-color: rgba(24, 23, 23, 0.637);
+}
+
+.auth-buttons {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.auth-buttons button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.auth-buttons button:hover {
+  background-color: rgba(24, 23, 23, 0.637);
+}
+
+.download-now {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(153, 0, 0);
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+  margin-top: 20px;
+}
+
+.download-now:hover {
+  background-color: rgba(24, 23, 23, 0.637);
+}
+
+@media (max-width: 768px) {
+  .mirror {
+      font-size: 24px; /* Smaller font size for mobile */
+      top: 5px; /* Adjust positioning */
+      right: 5%; /* Use percentage for responsiveness */
+  }
+
+  .about-thy {
+      font-size: 24px; /* Smaller font size for mobile */
+      margin-top: 80px; /* Adjust margin for better spacing */
+  }
+
+  .about {
+      font-size: 18px; /* Smaller font size for mobile */
+  }
+
+  a {
+      font-size: 24px; /* Smaller font size for mobile */
+      height: 40px; /* Adjust height */
+      line-height: 40px; /* Center text vertically */
+  }
+
+  .logo {
+      top: 5px; /* Adjust positioning */
+      left: calc(50% + 100px); /* Move 20 pixels to the right of the center */
+  }
+}
+
+@media (max-width: 480px) {
+  .mirror {
+      font-size: 18px;
+  }
+
+  .about-thy {
+      font-size: 20px;
+      margin-top: 60px;
+  }
+
+  .about {
+      font-size: 16px;
+  }
+
+  a {
+      font-size: 20px;
+      height: 35px;
+      line-height: 35px;
+  }
+}
+
+@supports (-webkit-touch-callout: none) {
+  a {
+      font-size: 26px;
+  }
+}
+
+@supports (-ms-ime-align: auto) { /* Edge/IE specific styles */
+  .logo {
+      left: calc(50% + 100px); /* Move 20 pixels to the right of the center */
+  }
+
+  a {
+      height: auto; /* Ensure links are properly sized */
+      line-height: normal; /* Prevent text from being cut off */
+      padding: 10px 0; /* Add padding for better spacing */
+  }
+}
+
+
